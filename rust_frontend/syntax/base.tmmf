@@ -1,0 +1,35 @@
+# MDRenderer 基础 Markdown 语法定义
+# TMMF 格式：每行 key=value，# 开头为注释
+name=base
+version=1.0
+description=基础Markdown语法（标题/粗体/斜体/代码/列表/引用）
+
+# 标题
+h1_trigger=#
+h1_style=font_size:28,bold:true,color:#1a1a1a
+h2_trigger=##
+h2_style=font_size:24,bold:true,color:#2a2a2a
+h3_trigger=###
+h3_style=font_size:20,bold:true,color:#333333
+h4_trigger=####
+h4_style=font_size:17,bold:true,color:#404040
+
+# 行内格式
+bold_trigger=**
+bold_style=bold:true
+italic_trigger=*
+italic_style=italic:true
+code_trigger=`
+code_style=font:Consolas,bg:#f5f5f5,color:#c7254e
+
+# 块级
+quote_trigger=>
+quote_style=left_border:3px #ccc,padding_left:10px,color:#666
+list_ul_trigger=-
+list_ul_style=bullet:disc
+list_ol_trigger=\d+.
+list_ol_style=bullet:decimal
+
+# 分隔线
+hr_trigger=---
+hr_style=border_top:1px #eee

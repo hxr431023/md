@@ -1,0 +1,9 @@
+TMMF.utf8
+MDRenderer.V1.0.10
+
+1
+# 主题配置
+<bg>ffffff,fg=000000,accent=2196F3,menuBg=ffffff,menuHover=E3F2FD,editorBg=ffffff,editorFg=212121,fontSize=14,fontFamily=微软雅黑<bg>
+<windowWidth>1000<windowWidth>
+<windowHeight>700<windowHeight>
+<sounds>open.wav,save.wav,new.wav,error.wav,close.wav<sounds>

@@ -1,0 +1,28 @@
+# MDRenderer 扩展语法：表情包
+# TMMF 格式：每行 key=value，# 开头为注释
+name=emoji
+version=1.0
+description=表情包语法：用中括号包裹文字，渲染为表情包图片
+# 语法格式：[文字]
+# 示例：[开心] [大笑] [doge]
+
+# 触发符
+trigger_start=[
+trigger_end=]
+type=inline
+
+# 样式配置键（在设置中关联 文字→图片路径）
+style_config_key=emoji_map
+# 支持动图(gif)和单图(png/jpg)
+support_animated=true
+support_static=true
+
+# 默认样式（未配置关联时的回退）
+default_style=rounded_corner:8px,max_height:32px,vertical_align:middle
+
+# 预设关联（可在设置中修改）
+preset_开心=assets/emoji/happy.gif
+preset_大笑=assets/emoji/laugh.png
+preset_doge=assets/emoji/doge.gif
+preset_点赞=assets/emoji/like.png
+preset_666=assets/emoji/666.gif

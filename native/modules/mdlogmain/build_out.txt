@@ -1,0 +1,72 @@
+========================================================================================================================
+GraalVM Native Image: Generating 'logmain.dll' (shared library)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+[1/8] Initializing...                                                                                  (15.6s @ 0.14GiB)
+ Builder configuration:
+ - Java version: 25.0.4.1+1, vendor version: GraalVM CE 25.3.4.1+1.1
+ - Graal compiler: optimization level: 2, target machine: x86-64-v3
+ - C compiler: cl.exe (microsoft, x64, 19.51.36248)
+ - Assertions: disabled, system assertions: disabled
+ Image configuration:
+ - Garbage collector: Serial GC (max heap size: 80% of RAM)
+ - Assertions: disabled (class-specific config may apply), system assertions: disabled
+------------------------------------------------------------------------------------------------------------------------
+ 1 experimental option(s) unlocked:
+ - '-H:Name' (alternative API option(s): -o logmain; origin(s): command line)
+------------------------------------------------------------------------------------------------------------------------
+Build resources:
+ - 8.92GiB of memory (56.2% of system memory, using all available memory)
+ - 8 thread(s) (100.0% of 8 available processor(s), determined at start)
+[2/8] Performing analysis...  [*****]                                                                  (20.1s @ 0.42GiB)
+    3,410 types,   3,801 fields, and  15,803 methods found reachable
+       86 types,      36 fields, and     329 methods registered for reflection
+       62 types,      52 fields, and      52 methods registered for JNI access
+       59 resource accesses registered with 171.30KiB total size
+        1 native library: version
+[3/8] Building universe...                                                                              (4.5s @ 0.48GiB)
+[4/8] Parsing methods...      [**]                                                                      (2.4s @ 0.49GiB)
+[5/8] Inlining methods...     [****]                                                                    (1.5s @ 0.53GiB)
+[6/8] Compiling methods...    [*****]                                                                  (27.1s @ 0.47GiB)
+[7/8] Laying out methods...   [**]                                                                      (3.3s @ 0.54GiB)
+[8/8] Creating image...       [**]                                                                      (3.1s @ 0.60GiB)
+   4.66MiB (41.49%) for code area:     9,053 compilation units
+   6.19MiB (55.11%) for image heap:   99,215 objects and 4 resources
+ 390.13KiB ( 3.39%) for other data
+  11.23MiB in total image size, 11.23MiB in total file size
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+ 708.78KiB java.base/java.util                                 1.27MiB byte[] for code metadata
+ 333.56KiB java.base/java.lang                                 1.20MiB byte[] for string data
+ 252.14KiB o.g.n.runtime/com.oracle.svm.core.code            719.48KiB java.base/java.lang.String
+ 240.68KiB java.base/java.text                               404.88KiB java.base/java.lang.Class
+ 196.59KiB java.base/java.util.regex                         372.97KiB o.g.n.runtime/c.o.s.core.hub.DynamicHubCompanion
+ 196.18KiB java.base/java.util.concurrent                    336.27KiB byte[] for general heap data
+ 186.74KiB java.base/java.util.stream                        248.31KiB heap alignment
+ 169.71KiB o.g.n.runtime/com.oracle.svm.core.genscavenge     226.16KiB java.base/java.util.HashMap$Node
+ 143.06KiB java.base/java.math                               186.52KiB java.base/java.lang.Object[]
+ 118.04KiB java.base/java.time.format                        171.37KiB byte[] for embedded resources
+   2.17MiB for 147 more packages                               1.11MiB for 1011 more object types
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ FUTR: Use '--future-defaults=all' to prepare for future releases.
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+------------------------------------------------------------------------------------------------------------------------
+                       3.5s (4.3% of total time) in 503 GCs | Peak RSS: 1.09GiB | CPU load: 4.47
+------------------------------------------------------------------------------------------------------------------------
+Build artifacts:
+ C:\wpjc\md\native\modules\mdlogmain\src\graal_isolate.h (c_header, 6.58KiB)
+ C:\wpjc\md\native\modules\mdlogmain\src\graal_isolate_dynamic.h (c_header, 6.69KiB)
+ C:\wpjc\md\native\modules\mdlogmain\src\logmain.dll (shared_library, 11.23MiB)
+ C:\wpjc\md\native\modules\mdlogmain\src\logmain.h (c_header, 764B)
+ C:\wpjc\md\native\modules\mdlogmain\src\logmain.lib (import_library, 95.44KiB)
+ C:\wpjc\md\native\modules\mdlogmain\src\logmain_dynamic.h (c_header, 932B)
+========================================================================================================================
+Finished generating 'logmain' in 1m 19s.
+
+The build process encountered 2 warnings.
+
+[OK] logmain.dll -> C:\wpjc\md\native\modules\mdlogmain\..\..\DLL\core

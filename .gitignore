@@ -1,0 +1,70 @@
+# 构建产物
+/native/build/
+/native/build-classes/
+/native/dist/
+/native/archive/
+/native/_cache_test/
+/native/_cache_persist/
+/native/_selftest_data/
+/native/**/src/*.class
+/native/**/src/*.lib
+/native/**/src/graal_isolate*.h
+/native/**/src/*_dynamic.h
+/native/DLL/**/*.dll
+/native/DLL/**/*.exe
+/native/*.log
+/native/*.obj
+/native/*.c
+/native/*.pyd
+/native/**/*.log
+/native/**/*.lib
+/native/javac_err*.txt
+/jni-config.json
+/reflect-config.json
+
+# 前端构建产物
+/rust_frontend/target/
+/rust_frontend/cargo_build.log
+/rust_release/
+/pyfrontend/DLL/
+/pyfrontend/DLLs/
+/pyfrontend/Lib/
+/pyfrontend/tcl/
+/pyfrontend/*.dll
+/pyfrontend/*.exe
+/pyfrontend/*.pyd
+
+# 安装包与运行时
+/installer/*.exe
+/installer/*.log
+/final/
+/runtime-min/
+/jpackage-input/
+temp/
+cache/
+log/
+flf/
+agent-trace/
+tpme/
+
+# 顶层杂项
+/*.class
+/*.obj
+/*.jar
+/*.dll
+/*.exe
+/MDRenderer*
+/MDModel.*
+/MDRenderer.java
+/svm_err_*.md
+
+# 第三方安装器二进制（构建时自行放置）
+/installer/innosetup-nuget/
+
+# 字体（版权原因不入库，构建时自行放置）
+/resources/fonts/
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store

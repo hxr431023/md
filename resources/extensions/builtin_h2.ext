@@ -1,0 +1,6 @@
+name=二级标题
+type=line
+pattern=^##\s+(.+)
+color=#16213e
+bold=true
+size=20

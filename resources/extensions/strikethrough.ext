@@ -1,0 +1,5 @@
+name=删除线
+type=inline
+pattern=~~(.+?)~~
+color=#888888
+strike=true

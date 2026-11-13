@@ -1,0 +1,6 @@
+name=一级标题
+type=line
+pattern=^#\s+(.+)
+color=#1a1a2e
+bold=true
+size=24

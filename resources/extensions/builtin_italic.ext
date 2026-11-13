@@ -1,0 +1,5 @@
+name=斜体
+type=inline
+pattern=\*(.+?)\*
+italic=true
+color=#333333

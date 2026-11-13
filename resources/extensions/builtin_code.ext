@@ -1,0 +1,6 @@
+name=行内代码
+type=inline
+pattern=`([^`]+)`
+mono=true
+color=#c7254e
+bgcolor=#f9f2f4

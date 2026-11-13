@@ -1,0 +1,5 @@
+name=粗体
+type=inline
+pattern=\*\*(.+?)\*\*
+bold=true
+color=#1a1a2e

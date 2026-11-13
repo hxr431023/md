@@ -1,0 +1,6 @@
+name=表格行
+type=line
+pattern=^\|.*\|$
+color=#333333
+bgcolor=#f0f0f0
+mono=true

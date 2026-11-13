@@ -1,0 +1,62 @@
+# MDRenderer 扩展语法：对话框
+# TMMF 格式：每行 key=value，# 开头为注释
+name=dialog
+version=1.0
+description=对话框语法：仿中文说话格式，冒号+前引号+文字+后引号+序号
+# 语法格式：:"文字"序号
+# 示例：:"你好"1  :"再见"2  :"哈哈哈"3
+
+# 触发模式（正则）
+trigger_pattern=:"([^"]*)"(\d+)
+type=inline
+
+# 样式配置键（在设置中关联 序号→样式）
+style_config_key=dialog_styles
+# 序号从1开始，代表第几个对话框样式
+style_count=5
+
+# 预设样式（序号=样式名，可在设置中修改）
+style_1_name=气泡-左
+style_1_bg=#e3f2fd
+style_1_border=#90caf9
+style_1_text=#1565c0
+style_1_radius=12px
+style_1_padding=8px 12px
+style_1_max_width=70%
+style_1_align=left
+
+style_2_name=气泡-右
+style_2_bg=#c8e6c9
+style_2_border=#81c784
+style_2_text=#2e7d32
+style_2_radius=12px
+style_2_padding=8px 12px
+style_2_max_width=70%
+style_2_align=right
+
+style_3_name=思考框
+style_3_bg=#fff3e0
+style_3_border=#ffb74d
+style_3_text=#e65100
+style_3_radius=4px
+style_3_padding=6px 10px
+style_3_max_width=80%
+style_3_align=center
+
+style_4_name=系统提示
+style_4_bg=#fce4ec
+style_4_border=#f48fb1
+style_4_text=#c2185b
+style_4_radius=4px
+style_4_padding=6px 10px
+style_4_max_width=90%
+style_4_align=center
+
+style_5_name=旁白
+style_5_bg=transparent
+style_5_border=none
+style_5_text=#666666
+style_5_radius=0
+style_5_padding=2px 4px
+style_5_max_width=100%
+style_5_align=center

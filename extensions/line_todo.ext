@@ -1,0 +1,5 @@
+name=任务列表
+type=line
+pattern=^- \[([ xX])\]\s*(.*)
+color=#2b9348
+bold=true

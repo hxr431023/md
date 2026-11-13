@@ -1,0 +1,55 @@
+# MDRenderer 扩展语法：超链接
+# TMMF 格式：每行 key=value，# 开头为注释
+name=link
+version=1.0
+description=超链接语法：两个约等号包裹路径，后面加序号代表样式
+# 语法格式：≈路径≈序号
+# 示例：≈https://example.com≈1  ≈./docs/readme.md≈2  ≈C:/tools/app.exe≈3
+
+# 触发模式（正则）
+trigger_pattern=≈([^≈]+)≈(\d+)
+type=inline
+
+# 样式配置键（在设置中关联 序号→样式）
+style_config_key=link_styles
+# 序号从1开始，代表第几个超链接样式
+style_count=3
+
+# 任何样式都必须有两个区域：
+#   area_1 = 图标区域（显示图标）
+#   area_2 = 名称/属性显示区域（显示名称和属性）
+
+# 样式1：网页链接
+style_1_name=网页链接
+style_1_icon=🌐
+style_1_icon_size=16px
+style_1_text_color=#1565c0
+style_1_underline=true
+style_1_hover_color=#0d47a1
+style_1_show_url=true
+style_1_area1_width=20px
+style_1_area2_min_width=80px
+
+# 样式2：本地文件
+style_2_name=本地文件
+style_2_icon=📄
+style_2_icon_size=16px
+style_2_text_color=#2e7d32
+style_2_underline=false
+style_2_hover_color=#1b5e20
+style_2_show_filename=true
+style_2_show_size=true
+style_2_area1_width=20px
+style_2_area2_min_width=100px
+
+# 样式3：程序启动
+style_3_name=程序启动
+style_3_icon=⚡
+style_3_icon_size=16px
+style_3_text_color=#e65100
+style_3_underline=false
+style_3_hover_color=#bf360c
+style_3_show_path=true
+style_3_show_args=true
+style_3_area1_width=20px
+style_3_area2_min_width=120px

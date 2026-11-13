@@ -1,0 +1,6 @@
+name=三级标题
+type=line
+pattern=^###\s+(.+)
+color=#0f3460
+bold=true
+size=16

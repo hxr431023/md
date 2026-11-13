@@ -1,0 +1,5 @@
+name=链接
+type=inline
+pattern=\[([^\]]+)\]\(([^\)]+)\)
+color=#0366d6
+underline=true

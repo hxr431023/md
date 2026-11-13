@@ -1,0 +1,54 @@
+=== app\cmd.dll (mdcmd) src=5 dll=11 ===
+  complete
+  src: cmd_exec, cmd_help, cmd_read_idp, cmd_to_idp, cmd_write_idp
+=== app\threadstat.dll (mdthreadstat) src=14 dll=6 ===
+  MISSING: mdthreadstat_read_idp, mdthreadstat_to_idp, mdthreadstat_write_idp, threadstat_disk, threadstat_disk_read, threadstat_disk_write, threadstat_get_json, threadstat_get_mode, threadstat_init, threadstat_memory, threadstat_register, threadstat_sample, threadstat_set_mode, threadstat_unregister
+  src: mdthreadstat_read_idp, mdthreadstat_to_idp, mdthreadstat_write_idp, threadstat_disk, threadstat_disk_read, threadstat_disk_write, threadstat_get_json, threadstat_get_mode, threadstat_init, threadstat_memory, threadstat_register, threadstat_sample, threadstat_set_mode, threadstat_unregister
+=== app\visualize.dll (mdvisualize) src=7 dll=13 ===
+  MISSING: mdvisualize_read_idp, mdvisualize_to_idp, mdvisualize_write_idp, visualize_stats_sorted_html, visualize_stats_to_file, visualize_stats_to_html, visualize_thread_modes
+  src: mdvisualize_read_idp, mdvisualize_to_idp, mdvisualize_write_idp, visualize_stats_sorted_html, visualize_stats_to_file, visualize_stats_to_html, visualize_thread_modes
+=== core\compress.dll (mdcompress) src=8 dll=14 ===
+  complete
+  src: compress_decompress_file, compress_file, compress_file_to_string, compress_ratio, compress_read_idp, compress_string_to_file, compress_to_idp, compress_write_idp
+=== core\config.dll (mdconfig) src=12 dll=18 ===
+  complete
+  src: config_get_setting, config_get_thread_mode, config_has_setting, config_init, config_load_settings, config_read_idp, config_remove_setting, config_save_settings, config_set_setting, config_set_thread_mode, config_to_idp, config_write_idp
+=== core\file.dll (mdfile) src=11 dll=17 ===
+  complete
+  src: file_append, file_delete, file_exists, file_extension, file_name, file_read, file_read_idp, file_size, file_to_idp, file_write, file_write_idp
+=== core\idp.dll (mdidp) src=6 dll=6 ===
+  complete
+  src: idp_peek_json, idp_pop_idp, idp_pop_json, idp_push, idp_stack_clear, idp_stack_size
+=== core\log.dll (mdlog) src=11 dll=25 ===
+  complete
+  src: log_clear_all, log_init, log_is_enabled, log_read_idp, log_set_enabled, log_shutdown, log_size, log_to_idp, log_write, log_write_end, log_write_idp
+=== core\single.dll (mdsingle) src=7 dll=13 ===
+  complete
+  src: single_is_locked, single_lock_path, single_read_idp, single_release, single_to_idp, single_try_lock, single_write_idp
+=== doc\convert-html.dll (mdconvert-html) src=5 dll=11 ===
+  complete
+  src: convert_html, convert_html_file, convert_html_read_idp, convert_html_to_idp, convert_html_write_idp
+=== doc\convert-text.dll (mdconvert-text) src=5 dll=11 ===
+  complete
+  src: convert_text, convert_text_file, convert_text_read_idp, convert_text_to_idp, convert_text_write_idp
+=== doc\convert-txt2md.dll (mdconvert-txt2md) src=5 dll=11 ===
+  complete
+  src: convert_txt2md, convert_txt2md_file, convert_txt2md_read_idp, convert_txt2md_to_idp, convert_txt2md_write_idp
+=== doc\doc.dll (mddoc) src=26 dll=32 ===
+  complete
+  src: doc_can_redo, doc_can_undo, doc_delete_text, doc_get_char_count, doc_get_content, doc_get_cursor, doc_get_cursor_col, doc_get_cursor_line, doc_get_file_path, doc_get_line_count, doc_get_text, doc_get_word_count, doc_init, doc_insert_text, doc_is_dirty, doc_new_document, doc_open_document, doc_read_idp, doc_redo, doc_save_document, doc_save_document_as, doc_set_content, doc_set_cursor, doc_to_idp, doc_undo, doc_write_idp
+=== doc\markdown.dll (mdmarkdown) src=9 dll=15 ===
+  complete
+  src: classify_line, count_chars, count_inline_styles, count_lines, count_words, markdown_read_idp, markdown_to_idp, markdown_write_idp, render_html
+=== doc\quicksort.dll (mdquicksort) src=7 dll=13 ===
+  complete
+  src: quicksort_info, quicksort_ints, quicksort_json_by_field, quicksort_read_idp, quicksort_strings, quicksort_to_idp, quicksort_write_idp
+=== doc\render.dll (mdrender) src=11 dll=26 ===
+  complete
+  src: render_find, render_get_line, render_insert, render_line, render_line_count, render_paged, render_read_idp, render_replace, render_to_idp, render_ui, render_write_idp
+=== tools\lerf.dll (mdlerf) src=10 dll=16 ===
+  complete
+  src: lerf_get, lerf_get_from_file, lerf_get_multi, lerf_key_count, lerf_list_all, lerf_load, lerf_read_idp, lerf_to_idp, lerf_validate, lerf_write_idp
+=== tools\tmmf.dll (mdtmmf) src=9 dll=15 ===
+  complete
+  src: tmmf_line_count, tmmf_list_tags, tmmf_read_all, tmmf_read_idp, tmmf_read_tag, tmmf_search, tmmf_to_idp, tmmf_write_idp, tmmf_write_tag

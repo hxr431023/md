@@ -1,0 +1,6 @@
+name=引用
+type=line
+pattern=^>\s+(.+)
+color=#555555
+italic=true
+bgcolor=#f5f5f5
