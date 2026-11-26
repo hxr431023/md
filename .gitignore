@@ -64,6 +64,12 @@ tpme/
 # 字体（版权原因不入库，构建时自行放置）
 /resources/fonts/
 
+# Go 版构建产物（源码与文档入库，DLL/EXE 不入库）
+/go/build/
+/dist/HDLL/**/*.dll
+/dist/HDLL/**/*.h
+/dist/HDLL/**/*.lib
+
 # 系统文件
 Thumbs.db
 desktop.ini

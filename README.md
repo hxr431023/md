@@ -1,10 +1,17 @@
 # MDRenderer
 
-一个自研 Markdown 编辑器：**GraalVM native-image 多 DLL 内核 + Rust 原生前端**。
+一个自研 Markdown 编辑器：**Go 多 DLL 内核（原 GraalVM 版源码保留）+ Rust 原生前端**。
 内核把每个可复用能力拆成独立 DLL，控制层只与 `controller.dll` 打交道；
 渲染与 CMD 走内存 IDP 栈，其余模块直接用 C 函数接口。
 
 当前版本：**v0.1.0**（首个发布版本）
+
+> **2026-11 更新：内核已用 Go 重写。**
+> - 单文件版：`go/single/md.go` → `go/build/md.exe`（`md.exe selftest` 55/55）
+> - 多 DLL 版：`go/dll/*` → `go/build/dll/*.dll`（23 个 DLL、269 个导出，逐符号验证）
+> - 成品布局与逐 DLL 使用方法：`dist/HDLL/README.md`
+> - 构建与架构说明：`go/README.md`
+> - 安装包会把 `dist/HDLL` 装入 `{app}\HDLL`，并注册用户环境变量 `HDLL`
 
 ---
 

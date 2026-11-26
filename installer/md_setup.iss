@@ -14,10 +14,14 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ; 变更时通知用户关闭程序
 CloseApplications=yes
+; Go 多 DLL 版通过用户环境变量 HDLL 定位，需要广播环境变量变更
+ChangesEnvironment=yes
 
 [Files]
-; Python/Cython 前端 + GraalVM DLL + Python 运行时
+; Python/Cython 前端 + Python 运行时
 Source: "C:\wpjc\md\pyfrontend\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
+; Go 版主体 + 分文件夹 DLL（app/core/doc/tools，每个文件夹含主控）
+Source: "C:\wpjc\md\dist\HDLL\*"; DestDir: "{app}\HDLL"; Flags: recursesubdirs createallsubdirs ignoreversion
 
 [Icons]
 Name: "{group}\MDRenderer"; Filename: "{app}\MDRenderer.bat"; IconFilename: "{app}\icon.ico"
@@ -29,6 +33,8 @@ Name: desktopicon; Description: "创建桌面快捷方式"; GroupDescription: "�
 Name: associate; Description: "关联 .md 文件到 MDRenderer"; GroupDescription: "文件关联:"; Flags: unchecked
 
 [Registry]
+; Go 版 DLL 目录：用户级环境变量 HDLL（卸载时删除）
+Root: HKCU; Subkey: "Environment"; ValueType: string; ValueName: "HDLL"; ValueData: "{app}\HDLL"; Flags: uninsdeletevalue
 ; .md 文件关联（仅当用户勾选 associate 任务时）
 Root: HKCR; Subkey: ".md"; ValueType: string; ValueName: ""; ValueData: "MDRenderer.md"; Flags: uninsdeletevalue; Tasks: associate
 Root: HKCR; Subkey: "MDRenderer.md"; ValueType: string; ValueName: ""; ValueData: "Markdown 文档"; Flags: uninsdeletekey; Tasks: associate
